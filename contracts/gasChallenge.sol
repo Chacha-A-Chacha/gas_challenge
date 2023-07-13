@@ -21,8 +21,8 @@ contract gasChallenge {
         }
     }
     
-    //Implement Remaining Gas Optimization Techniques Here
-    //Sum of elements in the numbers array should equal 0
+    //Implementing The Remaining Gas Optimization Techniques Here
+    //Sum of elements in the numbers array should be equal 0
     function optimizedFunction() public {
         uint256 length = numbers.length;
         assembly {
