@@ -3,8 +3,8 @@ pragma solidity ^0.8.0;
 
 contract gasChallenge {
     //Fixed-Size Array Technique Here
-    uint256[10] numbers = [1,2,3,4,5,6,7,8,9,10];
-    
+    uint[10] numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
     //Function to check for sum of array
     //No changes required in this function
     function getSumOfArray() public view returns (uint256) {
@@ -14,26 +14,29 @@ contract gasChallenge {
         }
         return sum;
     }
-    
+
     function notOptimizedFunction() public {
         for (uint i = 0; i < numbers.length; i++) {
             numbers[i] = 0;
         }
     }
-    
+
     //Implementing The Remaining Gas Optimization Techniques Here
     //Sum of elements in the numbers array should be equal 0
     function optimizedFunction() public {
         uint256 length = numbers.length;
         assembly {
             let ptr := numbers.slot
-            for {let i := 0} lt(i, length) {i := add(i, 1)} {
+            for {
+                let i := 0
+            } lt(i, length) {
+                i := add(i, 1)
+            } {
                 sstore(add(ptr, mul(i, 0x20)), 0)
             }
         }
     }
- }
-
+}
 
 /*
 
