@@ -7,7 +7,7 @@ contract gasChallenge {
 
     //Function to check for sum of array
     //No changes required in this function
-    function getSumOfArray() public view returns (uint) {
+    function getSumOfArray() public view returns (uint256) {
         uint sum = 0;
         for (uint i = 0; i < numbers.length; i++) {
             sum += numbers[i];
