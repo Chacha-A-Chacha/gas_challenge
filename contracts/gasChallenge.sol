@@ -7,7 +7,7 @@ contract gasChallenge {
 
     //Function to check for sum of array
     //No changes required in this function
-    function getSumOfArray() public view returns (uint256) {
+    function getSumOfArray() public view returns (uint) {
         uint sum = 0;
         for (uint i = 0; i < numbers.length; i++) {
             sum += numbers[i];
@@ -44,13 +44,13 @@ contract gasChallenge {
         //         sstore(add(ptr, mul(i, 0x20)), 0)
         //     }
         // }
-        uint256 length = numbers.length; // Cache the length of the `numbers` array
+        uint length = numbers.length; // Cache the length of the `numbers` array
 
         // Cache the `numbers` array to a local storage variable
-        uint256[10] storage localNumbers = numbers;
+        uint[10] storage localNumbers = numbers;
 
         // Iterate through each element of the `localNumbers` array and set it to 0
-        for (uint256 i = 0; i < length; i++) {
+        for (uint i = 0; i < length; i += 1) {
             localNumbers[i] = 0;
         }
     }
