@@ -49,8 +49,8 @@ contract gasChallenge {
         // Cache the `numbers` array to a local storage variable
         uint[10] storage localNumbers = numbers;
 
-        // Iterate through each element of the `localNumbers` array and set it to 0
-        for (uint i = 0; i < length; i += 1) {
+        // i++ over i += 1
+        for (uint i = 0; i < length; i++) {
             localNumbers[i] = 0;
         }
     }
