@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "C:\\Users\\user\\Desktop\\stackUp\\gas_challenge\\contracts\\gasChallenge.sol": {
-      "lastModificationDate": 1689291914288,
-      "contentHash": "fbf42ccc14743e1aa4df025e2325ebc5",
+      "lastModificationDate": 1689292315727,
+      "contentHash": "d15137247bf0a932e4cec550e0e06c7e",
       "sourceName": "contracts/gasChallenge.sol",
       "solcConfig": {
         "version": "0.8.18",

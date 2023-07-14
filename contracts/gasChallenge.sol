@@ -24,9 +24,10 @@ contract gasChallenge {
     //Implementing The Remaining Gas Optimization Techniques Here
     //Sum of elements in the numbers array should be equal 0
     function optimizedFunction() public {
-        uint256 length = numbers.length;
         assembly {
+            let length := sload(numbers.slot)
             let ptr := numbers.slot
+
             for {
                 let i := 0
             } lt(i, length) {
